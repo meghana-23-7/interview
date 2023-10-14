@@ -1,0 +1,34 @@
+<!Doctype html5>
+<html>
+<head>
+<title>Title</title>
+</head>
+<body>
+<form onsubmit="validate()">
+<div id="uid">
+<label for="userId" >User Id</label>
+<input type="text" name="userId" />
+</div>
+<br>
+<div id="passw">
+<label for="pass">Password</label>
+<input type="password" name="pass" required="true"/>
+</div>
+<br>
+<button type="submit" onclick="validate()">Submit</button>
+<form>
+<script>
+function validate(){
+let uid = document.getElementById("uid");
+console.log("uid");
+if(!(uid.find("@") || uid.isNum())){
+"please enter a valid user ID";
+}
+let p = document.getElementById("passw");
+if(!(p.length()<8){
+"please enter a valid password";
+}
+}
+</script>
+</body>
+</html>
